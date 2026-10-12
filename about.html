@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A. — Luxury Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+<header><nav class="nav">
+  <a href="index.html" class="logo">A.</a>
+  <ul class="links" id="links"></ul>
+  <div class="icons">
+    <button class="cart-btn" id="cartBtn" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cartCount">0</span></button>
+    <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav></header>
+<div class="sale-bar">🔥 SEASON SALE — <b>Flat 50% OFF</b> on Selected Items · Limited Time Only</div>
+<div class="body-wrap">
+  <aside class="sidebar" id="sidebar"><h4>Shop by Category</h4></aside>
+  <main class="main" id="main">
+<div class="hero" data-aos="fade-in" data-aos-duration="1200"><div class="hero-track"><div class="slide"><i class="fa-solid fa-circle-info"></i><div class="slide-txt"><span>About Us</span><h2>Quiet Luxury, Made to Last</h2></div></div></div></div>
+<section class="ab">
+  <div class="ab-story" data-aos="fade-up">
+    <img src="images/about.svg" alt="Our story">
+    <div><h2>Our Story</h2>
+      <p>A. ek aisa luxury house hai jo shor se nahi, mayaar se pehchana jata hai. Hum kapron, joota, ghadiyon, khushbuon aur zewar mein woh cheezein chunte hain jo saalon saath dein — sirf season ke liye nahi.</p>
+      <p>Har piece ko hum imandari se parakhte hain: material, silai, finishing aur value. Hamara maqsad hai ke aap ka har khareedaari ka tajurba aasan, mehfooz aur yaadgaar ho.</p></div>
+  </div>
+  <div class="ab-stats" data-aos="fade-up"><div><b>75+</b>Curated Pieces</div><div><b>5</b>Collections</div><div><b>10k+</b>Happy Clients</div><div><b>4.9★</b>Average Rating</div></div>
+  <h2>Why Choose A.</h2>
+  <div class="ab-vals" data-aos="fade-up">
+    <div><i class="fa-solid fa-gem"></i><h3>Premium Quality</h3><p>Har product hath se chuna jata hai aur bheje jane se pehle check hota hai.</p></div>
+    <div><i class="fa-solid fa-truck-fast"></i><h3>Nationwide Delivery</h3><p>Poore Pakistan mein delivery. Rs. 10,000 se upar ke orders par delivery free.</p></div>
+    <div><i class="fa-solid fa-shield-halved"></i><h3>Easy & Secure</h3><p>COD, JazzCash, EasyPaisa aur Bank Transfer — jo aap ko suit kare.</p></div>
+  </div>
+  <div class="ab-contact" data-aos="fade-up" id="contact">
+    <div><h2>Get in Touch</h2>
+      <ul><li><i class="fa-solid fa-location-dot"></i>Sukkur, Sindh, Pakistan</li><li><i class="fa-solid fa-phone"></i>+92 300 0000000</li><li><i class="fa-solid fa-envelope"></i>hello@astore.pk</li><li><i class="fa-solid fa-clock"></i>Mon – Sat, 10am – 8pm</li></ul></div>
+    <form id="contactForm"><input id="cName" placeholder="Your name" required><input id="cMail" type="email" placeholder="Your email" required><textarea id="cMsg" rows="4" placeholder="Your message" required></textarea><button type="submit">Send Message</button><div id="cOk"></div></form>
+  </div>
+</section>
+</main>
+</div>
+<footer class="a-footer">
+  <div class="f-in">
+    <div><div class="fl">A.</div><p>Quiet luxury, made to last — every piece, considered.</p>
+      <div class="soc"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://wa.me/920000000000" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+    <div><h5>Shop</h5><a href="clothes.html">Clothes</a><a href="shoes.html">Shoes</a><a href="watches.html">Watches</a><a href="fragrances.html">Fragrances</a><a href="jewelry.html">Jewelry</a></div>
+    <div><h5>Company</h5><a href="index.html">Home</a><a href="about.html">About Us</a><a href="about.html#contact">Contact</a><a href="#" id="fCart">My Cart</a></div>
+    <div><h5>Newsletter</h5><p>Naye arrivals aur sale ki khabar sab se pehle.</p>
+      <form id="nlForm"><input type="email" id="nlMail" placeholder="Your email" required><button type="submit">Join</button></form>
+      <div class="f-msg" id="nlMsg"></div></div>
+  </div>
+  <div class="f-bot" data-aos="fade-in">© 2026 A. — All rights reserved.</div>
+</footer>
+
+<!-- Cart / Checkout -->
+<div class="overlay" id="overlay"><div class="modal">
+  <div class="m-head"><h3>Your Cart</h3><button id="closeCart">✕</button></div>
+  <div class="m-body">
+    <div class="cart-list" id="cartList"></div>
+    <div class="summary" id="summary"></div>
+    <div class="row2"><div><label>Full Name</label><input id="fName"></div><div><label>Phone</label><input id="fPhone"></div></div>
+    <div><label>Delivery Address</label><input id="fAddr"></div>
+    <div class="row2"><div><label>City</label><input id="fCity"></div>
+      <div><label>Province</label><select id="fProv"><option>Sindh</option><option>Punjab</option><option>KPK</option><option>Balochistan</option><option>Islamabad</option></select></div></div>
+    <div><label>Payment</label><div class="pay-tabs" id="payTabs">
+      <button class="pay-tab on" data-pay="Cash on Delivery"><i class="fa-solid fa-money-bill"></i>COD</button>
+      <button class="pay-tab" data-pay="JazzCash"><i class="fa-solid fa-mobile-screen"></i>JazzCash</button>
+      <button class="pay-tab" data-pay="EasyPaisa"><i class="fa-solid fa-wallet"></i>EasyPaisa</button>
+      <button class="pay-tab" data-pay="Bank Transfer"><i class="fa-solid fa-building-columns"></i>Bank</button>
+    </div></div>
+    <div class="pay-info" id="payInfo"></div>
+    <div class="err" id="err"></div>
+    <button class="place-btn" id="placeBtn">Place Order Securely</button>
+  </div>
+</div></div>
+<div class="overlay" id="thanks"><div class="modal thankyou">
+  <i class="fa-solid fa-circle-check"></i><h3 id="tyTitle">Thank you!</h3><p id="tyText"></p><br>
+  <button class="place-btn" id="tyClose">Close</button>
+</div></div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
